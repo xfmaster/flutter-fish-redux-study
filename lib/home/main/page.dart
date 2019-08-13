@@ -18,8 +18,8 @@ class MainPage extends Page<MainPageState, Map<String, dynamic>> {
           dependencies: Dependencies<MainPageState>(
               adapter: null,
               slots: <String, Dependent<MainPageState>>{
-                "index": IndexComponent().asDependent(indexConnector()),
-                "smart": SmartPage().asDependent(smartConnector()),
+                "index": indexConnector() + IndexComponent(),
+                "smart": smartConnector() + SmartPage(),
 //                "appBar": AppBarComponent().asDependent(appBarConnector()),
               }),
           middleware: <Middleware<MainPageState>>[],

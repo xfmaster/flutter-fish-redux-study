@@ -13,7 +13,7 @@ class HomePage extends Page<HomeState, Map<String, dynamic>> {
           reducer: buildReducer(),
           view: buildView,
           dependencies: Dependencies<HomeState>(
-              adapter: HomeListAdapter(),
+              adapter:NoneConn<HomeState>()+ HomeListAdapter(),
               slots: <String, Dependent<HomeState>>{
 //          "index": IndexComponent().asDependent(indexConnector()),
 //          "appBar": AppBarComponent().asDependent(appBarConnector()),

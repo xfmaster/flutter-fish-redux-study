@@ -15,7 +15,7 @@ class SmartPage extends Page<SmartState, Map<String, dynamic>> {
           reducer: buildReducer(),
           view: buildView,
           dependencies: Dependencies<SmartState>(
-              adapter: SmartListAdapter(),
+              adapter:NoneConn<SmartState>()+ SmartListAdapter(),
               slots: <String, Dependent<SmartState>>{
               }),
           middleware: <Middleware<SmartState>>[
